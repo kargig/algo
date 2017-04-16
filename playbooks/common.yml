@@ -4,6 +4,10 @@
   raw: uname -a
   register: OS
 
+- name: Debian pre-tasks
+  include: debian.yml
+  when: '"Debian" in OS.stdout'
+
 - name: Ubuntu pre-tasks
   include: ubuntu.yml
   when: '"Ubuntu" in OS.stdout'

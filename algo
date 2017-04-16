@@ -383,7 +383,7 @@ algo_provisioning () {
     2. Amazon EC2
     3. Microsoft Azure
     4. Google Compute Engine (only for testing, see issue #369)
-    5. Install to existing Ubuntu 16.04 server
+    5. Install to existing Ubuntu 16.04/Debian Stretch server
 
 Enter the number of your desired provider
 : "

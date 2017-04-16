@@ -10,6 +10,15 @@
 - name: restart loopback
   shell: ifdown lo:100 && ifup lo:100
 
+- name: load dummy
+  shell: modprobe dummy
+
+- name: add dummy
+  shell: ip link add dummy100 type dummy
+
+- name: restart dummy
+  shell: ifdown --force dummy100 && ifup dummy100
+
 - name: restart loopback bsd
   shell: >
     ifconfig lo100 destroy || true &&
